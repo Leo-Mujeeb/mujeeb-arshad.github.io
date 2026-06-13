@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RSEI Research Gallery - Spatiotemporal Ecological Analysis (2021-2025)">
+    <title>Research Gallery | RSEI Ecological Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Page-specific styles */
+        body {
+            padding-top: 80px;
+        }
+
+        .research-header {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a0f2e 50%, #0A0A0A 100%);
+            padding: 60px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+        }
+
+        .research-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        .research-title {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .research-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .research-title {
+                font-size: 1.8rem;
+            }
+
+            .research-subtitle {
+                font-size: 1rem;
+            }
+
+            .research-meta {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html#home" class="nav-link">
+                        <span class="logo-icon">🗺️</span>
+                        <span class="logo-text">MA</span>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Header -->
+    <section class="research-header">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Projects
+            </a>
+            <h1 class="research-title">
+                <i class="fas fa-satellite"></i>
+                RSEI Research Gallery
+            </h1>
+            <p class="research-subtitle">
+                Spatiotemporal Assessment of Ecological Quality Using Remote Sensing Ecological Index
+            </p>
+            <p class="research-subtitle" style="font-size: 1rem; margin-top: 0.5rem;">
+                A Five-Year Study of Lahore and Hafizabad Districts, Punjab, Pakistan (2021–2025)
+            </p>
+            <div class="research-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>February 2026 - May 2026</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Study Period: 2021-2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Lahore & Hafizabad, Pakistan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Research Image Gallery</h2>
+            <p class="gallery-subtitle">
+                Browse through comprehensive ecological analysis results organized by year and data category
+            </p>
+
+            <!-- Year Filter Tabs -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-year="all">All Years</button>
+                <button class="filter-btn" data-year="2021">2021</button>
+                <button class="filter-btn" data-year="2022">2022</button>
+                <button class="filter-btn" data-year="2023">2023</button>
+                <button class="filter-btn" data-year="2024">2024</button>
+                <button class="filter-btn" data-year="2025">2025</button>
+                <button class="filter-btn" data-year="change">Change Detection</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">All Categories</button>
+                <button class="category-btn" data-category="NDVI">NDVI</button>
+                <button class="category-btn" data-category="LST">LST</button>
+                <button class="category-btn" data-category="NDBSI">NDBSI</button>
+                <button class="category-btn" data-category="WETNESS">Wetness</button>
+                <button class="category-btn" data-category="RSEI">RSEI Classification</button>
+                <button class="category-btn" data-category="PC1">PCA Results</button>
+                <button class="category-btn" data-category="WATER">Water Mask</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Images will be loaded dynamically by JavaScript -->
+            </div>
+
+            <!-- Image Modal -->
+            <div id="imageModal" class="modal">
+                <span class="modal-close">&times;</span>
+                <div class="modal-content-wrapper">
+                    <img class="modal-content" id="modalImage">
+                    <div class="modal-caption">
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+                <button class="modal-nav modal-prev">&#10094;</button>
+                <button class="modal-nav modal-next">&#10095;</button>
+            </div>
+
+            <!-- Gallery Stats -->
+            <div class="gallery-stats">
+                <div class="gallery-stat-item">
+                    <i class="fas fa-images"></i>
+                    <h3 id="totalImages">320+</h3>
+                    <p>Total Images</p>
+                </div>
+                <div class="gallery-stat-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>5</h3>
+                    <p>Years Analyzed</p>
+                </div>
+                <div class="gallery-stat-item">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>8</h3>
+                    <p>Data Categories</p>
+                </div>
+                <div class="gallery-stat-item">
+                    <i class="fas fa-satellite"></i>
+                    <h3>20</h3>
+                    <p>Satellite Scenes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Hafiz M Mujeeb Arshad. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="mailto:mujeebarshad053@gmail.com" aria-label="Email" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mujeeb_writes.1?igsh=emQwN2FuaXdheDZh" aria-label="Instagram"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mujeeb-arshad-6023b3275/" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+
+</html>
